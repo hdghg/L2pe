@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.example</groupId>
     <artifactId>l2pe</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>2.3.3-it</version>
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -83,7 +83,12 @@
                     <archive>
                         <manifest>
                             <mainClass>acmi.l2.clientmod.l2pe.L2PE</mainClass>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                            <addDefaultEntries>true</addDefaultEntries>
                         </manifest>
+                        <manifestEntries>
+                            <Version>${project.version}</Version>
+                        </manifestEntries>
                     </archive>
                 </configuration>
                 <executions>
